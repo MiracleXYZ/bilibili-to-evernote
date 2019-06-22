@@ -49,8 +49,8 @@ python main.py t [dynamic-id]
 目前支持：
 
 - 哔哩哔哩相簿
-  - 网址：`https://h.bilibili.com/{dynamic_id}`
-  - 命令：`python main.py h 25467761`
+  - 网址：`https://h.bilibili.com/{doc_id}`
+  - 命令：`python main.py h {doc_id}`
 - 图片动态（或转发图片动态的动态）
   - 网址：`https://t.bilibili.com/{dynamic_id}`
   - 命令：`python main.py t {dynamic_id}`
