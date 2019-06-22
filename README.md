@@ -10,6 +10,8 @@
 
 ## 安装
 
+### 子模块初始化
+
 首先安装 submodule `evernote`:
 
 ``` sh
@@ -23,6 +25,14 @@ git submodule update
 ``` sh
 git clone --recursive git@github.com:MiracleXYZ/bilibili-to-evernote.git
 ```
+
+### 安装 `evernote` 库
+
+``` sh
+cd evernote
+python setup.py install
+```
+
 
 
 ## 使用
