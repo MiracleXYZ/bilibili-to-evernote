@@ -33,19 +33,22 @@ cd evernote
 python setup.py install
 ```
 
+### 安装依赖
+
+``` sh
+pip install -r requirements.txt
+```
 
 
 ## 使用
 
+### 创建配置文件 `config.toml`
+
+`config.toml.example` 是一个配置文件的示例。实际使用时，将其更名或复制为 `config.toml` 即可。
+
 ### 申请API Token
 
-到网站 https://app.yinxiang.com/api/DeveloperToken.action 申请API Token，并在根目录新建一个`config.py`，写入：
-
-``` python
-developer_token = ""
-```
-
-在引号中粘贴你申请到的Token。
+到网站 https://app.yinxiang.com/api/DeveloperToken.action 申请API Token，并将 `config.toml` 中 `[client]` 部分的 `token` 属性改为你申请到的Token。
 
 > 请像保存**你的印象笔记密码**一样保存这个token！只要有人拿到这个token，理论上他能对你的账号做任何事情……
 

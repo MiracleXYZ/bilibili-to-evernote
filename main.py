@@ -2,20 +2,23 @@ import json
 import sys
 
 import requests
+import toml
 from lxml import etree, objectify
 from lxml.builder import ElementMaker
 from lxml.etree import Element, ElementTree
 
 import evernote.edam.type.ttypes as Types
-from config import developer_token
 from evernote.api.client import EvernoteClient
 from functions import insert_img
 from parse import parse_response
 from utils import *
 
+with open('config.toml', 'r', encoding='utf8') as f:
+    config = toml.load(f)
+
 E = ElementMaker()
 
-notebook_name = 'B博'
+notebook_name = config['notebook']['name']
 
 # 解析动态的JSON数据
 dynamic_type = sys.argv[1]
@@ -23,7 +26,7 @@ dynamic_id = sys.argv[2]
 dynamic_data = parse_response(dynamic_type, dynamic_id)
 
 # Set up the NoteStore client 
-client = EvernoteClient(token=developer_token, sandbox=False, china=True)
+client = EvernoteClient(**config['client'])
 note_store = client.get_note_store()
 notebooks = note_store.listNotebooks()
 
