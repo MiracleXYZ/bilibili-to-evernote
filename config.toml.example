@@ -2,3 +2,6 @@
 token = "your developer token here"
 china = true
 sandbox = false
+
+[notebook]
+name = "B博"
