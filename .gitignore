@@ -1,2 +1,3 @@
 config.toml
 notes/
+__pycache__/
