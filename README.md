@@ -35,10 +35,17 @@ python setup.py install
 
 ### 安装依赖
 
+#### 通过requirements
+
 ``` sh
 pip install -r requirements.txt
 ```
 
+#### 通过poetry
+
+``` sh
+poetry install
+```
 
 ## 使用
 

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bilibili-to-evernote"
+version = "0.1.0"
+description = "一个将B站动态保存到Evernote（印象笔记）的工具"
+authors = ["MiracleXYZ <xieyuzhang_xyz@foxmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.22"
+pytz = "^2019.1"
+pillow = "^6.0"
+lxml = "^4.3"
+toml = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
